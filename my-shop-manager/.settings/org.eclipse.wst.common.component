@@ -31,6 +31,9 @@
         <dependent-module archiveName="my-shop-pay-0.0.1-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/my-shop-pay/my-shop-pay">
             <dependency-type>uses</dependency-type>
         </dependent-module>
+        <dependent-module archiveName="my-shop-cms-0.0.1-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/my-shop-cms/my-shop-cms">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
         <property name="context-root" value="my-shop-manager"/>
         <property name="java-output-path" value="/my-shop-manager/target/classes"/>
     </wb-module>

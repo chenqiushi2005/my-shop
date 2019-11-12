@@ -43,20 +43,20 @@ public class ApiIndexController extends ApiBaseAction {
     @IgnoreAuth
     @RequestMapping("index")
     public Object index() {
-        Map<String, Object> resultObj = new HashMap();
+        Map<String, Object> resultObj = new HashMap<String, Object>();
         //
-        Map param = new HashMap();
+        Map<String, Object> param = new HashMap<String, Object>();
         param.put("ad_position_id", 1);
         List<AdVo> banner = adService.queryList(param);
         resultObj.put("banner", banner);
         //
-        param = new HashMap();
+        param = new HashMap<String, Object>();
         param.put("sidx", "sort_order ");
         param.put("order", "asc ");
         List<ChannelVo> channel = channelService.queryList(param);
         resultObj.put("channel", channel);
         //
-        param = new HashMap();
+        param = new HashMap<String, Object>();
         param.put("is_new", 1);
         param.put("offset", 0);
         param.put("limit", 4);

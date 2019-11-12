@@ -1,23 +1,33 @@
 package com.fengdu.controller;
 
-import com.fengdu.annotation.SysLog;
-import com.fengdu.entity.SysUserEntity;
-import com.fengdu.service.SysUserRoleService;
-import com.fengdu.service.SysUserService;
-import com.fengdu.utils.*;
-import com.fengdu.validator.Assert;
-import com.fengdu.validator.ValidatorUtils;
-import com.fengdu.validator.group.AddGroup;
-import com.fengdu.validator.group.UpdateGroup;
+import java.util.List;
+import java.util.Map;
 
 import org.apache.commons.lang.ArrayUtils;
 import org.apache.shiro.authz.annotation.RequiresPermissions;
 import org.apache.shiro.crypto.hash.Sha256Hash;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RestController;
 
-import java.util.List;
-import java.util.Map;
+import com.fengdu.annotation.SysLog;
+import com.fengdu.entity.SysUserEntity;
+import com.fengdu.service.SysUserRoleService;
+import com.fengdu.service.SysUserService;
+import com.fengdu.utils.Constant;
+import com.fengdu.utils.PageUtils;
+import com.fengdu.utils.Query;
+import com.fengdu.utils.R;
+import com.fengdu.utils.RRException;
+import com.fengdu.utils.ResourceUtil;
+import com.fengdu.utils.ShiroUtils;
+import com.fengdu.validator.Assert;
+import com.fengdu.validator.ValidatorUtils;
+import com.fengdu.validator.group.AddGroup;
+import com.fengdu.validator.group.UpdateGroup;
 
 /**
  * 系统用户

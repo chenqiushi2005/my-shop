@@ -59,7 +59,7 @@
 			<artifactId>my-shop-member</artifactId>
 			<version>${project.version}</version>
 		</dependency>
-			<dependency>
+		<dependency>
 			<groupId>com.fengdu</groupId>
 			<artifactId>my-shop-wms</artifactId>
 			<version>${project.version}</version>
@@ -67,6 +67,11 @@
 			<dependency>
 			<groupId>com.fengdu</groupId>
 			<artifactId>my-shop-pay</artifactId>
+			<version>${project.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.fengdu</groupId>
+			<artifactId>my-shop-cms</artifactId>
 			<version>${project.version}</version>
 		</dependency>
 		<dependency>

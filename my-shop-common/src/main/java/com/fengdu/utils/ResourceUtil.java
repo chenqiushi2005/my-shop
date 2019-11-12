@@ -14,7 +14,8 @@ import java.util.ResourceBundle;
 public class ResourceUtil {
     private static ResourceUtil RESOURCE_UTIL = null;
 
-    private static ResourceBundle BUNDLE = java.util.ResourceBundle.getBundle("myshop");
+    private static ResourceBundle BUNDLE = java.util.ResourceBundle.getBundle("dev/myshop");
+//    private static ResourceBundle BUNDLE  = null;
 
     private ResourceUtil() {
 
